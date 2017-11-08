@@ -5,34 +5,34 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>window系统下GitHub+Hexo博客搭建 | Hexo</title>
+  <link rel="dns-prefetch" href="http://www.edwarder.com">
+  <title>window系统下GitHub+Hexo博客搭建 | Edwarder&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="01 前沿很多朋友都想试着搭建一个属于自己的技术博客，我在这里为大家介绍一种方法。Hexo是一个快速简洁的博客框架，把代码提交到Github上并且开启Github pages就可以直接访问了。网上的教程也有很多，不过新手在搭建的过程中会遇到很多坑，本文为大家规避了一些诸如“nmp速度慢”、“命令错误”等问题，希望可以帮助到大家！ 02 安装环境（node和git） nodejs官网：https:/">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="window系统下GitHub+Hexo博客搭建">
-<meta property="og:url" content="http://yoursite.com/2017/11/05/hexo/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="http://www.edwarder.com/2017/11/05/hexo/index.html">
+<meta property="og:site_name" content="Edwarder&#39;s Blog">
 <meta property="og:description" content="01 前沿很多朋友都想试着搭建一个属于自己的技术博客，我在这里为大家介绍一种方法。Hexo是一个快速简洁的博客框架，把代码提交到Github上并且开启Github pages就可以直接访问了。网上的教程也有很多，不过新手在搭建的过程中会遇到很多坑，本文为大家规避了一些诸如“nmp速度慢”、“命令错误”等问题，希望可以帮助到大家！ 02 安装环境（node和git） nodejs官网：https:/">
-<meta property="og:image" content="http://yoursite.com/2017/11/05/hexo/01.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/05/hexo/02.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/05/hexo/03.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/05/hexo/04.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/05/hexo/05.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/05/hexo/06.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/05/hexo/07.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/05/hexo/08.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/05/hexo/09.png">
-<meta property="og:image" content="http://yoursite.com/2017/11/05/hexo/10.png">
-<meta property="og:updated_time" content="2017-11-08T03:37:36.829Z">
+<meta property="og:image" content="http://www.edwarder.com/2017/11/05/hexo/01.png">
+<meta property="og:image" content="http://www.edwarder.com/2017/11/05/hexo/02.png">
+<meta property="og:image" content="http://www.edwarder.com/2017/11/05/hexo/03.png">
+<meta property="og:image" content="http://www.edwarder.com/2017/11/05/hexo/04.png">
+<meta property="og:image" content="http://www.edwarder.com/2017/11/05/hexo/05.png">
+<meta property="og:image" content="http://www.edwarder.com/2017/11/05/hexo/06.png">
+<meta property="og:image" content="http://www.edwarder.com/2017/11/05/hexo/07.png">
+<meta property="og:image" content="http://www.edwarder.com/2017/11/05/hexo/08.png">
+<meta property="og:image" content="http://www.edwarder.com/2017/11/05/hexo/09.png">
+<meta property="og:image" content="http://www.edwarder.com/2017/11/05/hexo/10.png">
+<meta property="og:updated_time" content="2017-11-08T06:25:21.564Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="window系统下GitHub+Hexo博客搭建">
 <meta name="twitter:description" content="01 前沿很多朋友都想试着搭建一个属于自己的技术博客，我在这里为大家介绍一种方法。Hexo是一个快速简洁的博客框架，把代码提交到Github上并且开启Github pages就可以直接访问了。网上的教程也有很多，不过新手在搭建的过程中会遇到很多坑，本文为大家规避了一些诸如“nmp速度慢”、“命令错误”等问题，希望可以帮助到大家！ 02 安装环境（node和git） nodejs官网：https:/">
-<meta name="twitter:image" content="http://yoursite.com/2017/11/05/hexo/01.png">
+<meta name="twitter:image" content="http://www.edwarder.com/2017/11/05/hexo/01.png">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/assets/img/favicon.ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.507b3a.css">
   <style type="text/css">
@@ -179,6 +179,7 @@
 <p>查看node和npm版本号</p>
 <p><img src="/2017/11/05/hexo/01.png" alt=""> </p>
 <p>查看git版本号</p>
+<a id="more"></a>
 <p><img src="/2017/11/05/hexo/02.png" alt=""> </p>
 <h3 id="03-配置GitHub"><a href="#03-配置GitHub" class="headerlink" title="03 配置GitHub"></a>03 配置GitHub</h3><p> <strong>1) 配置仓库 </strong></p>
 <p>Github账号注册就跳过了，登陆过后点击new repository，Repository name填写自己的名称 + .github.io</p>
@@ -337,7 +338,7 @@ $ hexo server（或者hexo s）
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/11/05/hexo/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.edwarder.com/2017/11/05/hexo/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -385,7 +386,7 @@ $ hexo server（或者hexo s）
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="hexo" data-title="window系统下GitHub+Hexo博客搭建" data-url="http://yoursite.com/2017/11/05/hexo/"></div>
+	<div class="ds-thread" data-thread-key="hexo" data-title="window系统下GitHub+Hexo博客搭建" data-url="http://www.edwarder.com/2017/11/05/hexo/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -524,11 +525,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">hexo-img</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">hexo-img</a>
               </li>
             
             <div class="clearfix"></div>
