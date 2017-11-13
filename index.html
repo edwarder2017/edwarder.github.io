@@ -137,6 +137,106 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-eclipse-jadclipse" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/13/eclipse-jadclipse/">eclipse集成jadclipse反编译插件</a>
+    </h1>
+  
+
+
+
+  <a href="javascript:;" class="archive-article-date">
+      <i class="icon-smile icon"></i> 阅读数:<span id="/2017/11/13/eclipse-jadclipse/" class="pageViews">0</span>次
+  </a>
+
+        
+        <a href="/2017/11/13/eclipse-jadclipse/" class="archive-article-date">
+  	<time datetime="2017-11-13T02:59:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="01-准备工作"><a href="#01-准备工作" class="headerlink" title="01 准备工作"></a>01 准备工作</h3><p>###1 将net.sf.jadclipse_3.3.0.jar拷贝到eclipse的plugins目录下</p>
+<p>###2 如果eclipse是开着的，点击菜单栏中File-&gt;Restart，否则直接打开。</p>
+<p>###3 将jad.exe文件放到磁盘的某一位置。</p>
+<h3 id="02-设置jad文件路径"><a href="#02-设置jad文件路径" class="headerlink" title="02 设置jad文件路径"></a>02 设置jad文件路径</h3><p>设置jad的可执行文件路径以及生成的临时文件路径，如图示</p>
+<p><img src="/2017/11/13/eclipse-jadclipse/01.jpg" alt=""></p>
+<h3 id="03-设置-class文件类型默认打开方式"><a href="#03-设置-class文件类型默认打开方式" class="headerlink" title="03 设置*.class文件类型默认打开方式"></a>03 设置*.class文件类型默认打开方式</h3><p>打开Eclipse -&gt; window -&gt; preferences,然后搜索file associations，如图示</p>
+<p><img src="/2017/11/13/eclipse-jadclipse/02.jpg" alt=""></p>
+<p>设置.class文件的打开方式,添加jadClipse解析器，并设为默认</p>
+<p><img src="/2017/11/13/eclipse-jadclipse/03.jpg" alt=""></p>
+<h3 id="03-设置-class-without-source文件类型打开方式"><a href="#03-设置-class-without-source文件类型打开方式" class="headerlink" title="03 设置*.class without source文件类型打开方式"></a>03 设置*.class without source文件类型打开方式</h3><p>最后设置*.class without source文件类型打开方式，如图示</p>
+<p><img src="/2017/11/13/eclipse-jadclipse/04.jpg" alt=""></p>
+<p>附：资源文件下载地址</p>
+<p>链接：<a href="http://pan.baidu.com/s/1eS0D9E6" target="_blank" rel="external">http://pan.baidu.com/s/1eS0D9E6</a> 密码：icii</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">jadclipse</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">反编译插件</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">eclipse反编译插件</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/13/eclipse-jadclipse/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hexo-blog-doname" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -538,6 +638,18 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">jadclipse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">反编译插件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">eclipse反编译插件</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">hexo-img</a>
