@@ -137,6 +137,94 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-md-to-html" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/md-to-html/">md文件转html页面</a>
+    </h1>
+  
+
+
+
+  <a href="javascript:;" class="archive-article-date">
+      <i class="icon-smile icon"></i> 阅读数:<span id="/2017/11/21/md-to-html/" class="pageViews">0</span>次
+  </a>
+
+        
+        <a href="/2017/11/21/md-to-html/" class="archive-article-date">
+  	<time datetime="2017-11-21T02:39:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="01-概述需求"><a href="#01-概述需求" class="headerlink" title="01 概述需求"></a>01 概述需求</h2><p>前段时间在网上下了一些学习资料文档，发现都是用markdown写的，那么相应的文件也是后缀为md的文件。当然对于md文件你可以是用文本编辑器打开，或者使用安装的markdown软件打开。但是这样总是有点不方便，还得依赖另一个软件才能查看，而且文本内容还是编译状态。那么我们能不能将md文件转成html文件，这样双击打开就可以直接浏览器预览了。答案是可以！</p>
+<h2 id="02-具体操作"><a href="#02-具体操作" class="headerlink" title="02 具体操作"></a>02 具体操作</h2><h3 id="2-1-方式一"><a href="#2-1-方式一" class="headerlink" title="2.1 方式一"></a>2.1 方式一</h3><p>使用markdown的自带转出功能，File-&gt;Export-&gt;Export HTML.这样呢也是最简便的方式，前提是你要安装了markdown软件。</p>
+<h3 id="2-2-方式二"><a href="#2-2-方式二" class="headerlink" title="2.2 方式二"></a>2.2 方式二</h3><p>使用第三方的工具，这边我将一个由个人开发的工具教gaiden，该工具在百度里里基本是找不到的，也找不到相关的资料。在本文的最后我会提供该资料百度云盘下载路径。</p>
+        
+          <a class="article-more-a" href="/2017/11/21/md-to-html/#more">阅读全文 >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">md</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">md文件</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/21/md-to-html/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-eclipse-jadclipse" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -167,16 +255,9 @@
 <p><strong>2</strong> 如果eclipse是开着的，点击菜单栏中File-&gt;Restart，否则直接打开。</p>
 <p><strong>3</strong> 将jad.exe文件放到磁盘的某一位置。</p>
 <h3 id="02-设置jad文件路径"><a href="#02-设置jad文件路径" class="headerlink" title="02 设置jad文件路径"></a>02 设置jad文件路径</h3><p>设置jad的可执行文件路径以及生成的临时文件路径，如图示</p>
-<p><img src="/2017/11/13/eclipse-jadclipse/01.jpg" alt=""></p>
-<h3 id="03-设置-class文件类型默认打开方式"><a href="#03-设置-class文件类型默认打开方式" class="headerlink" title="03 设置*.class文件类型默认打开方式"></a>03 设置*.class文件类型默认打开方式</h3><p>打开Eclipse -&gt; window -&gt; preferences,然后搜索file associations，如图示</p>
-<p><img src="/2017/11/13/eclipse-jadclipse/02.jpg" alt=""></p>
-<p>设置.class文件的打开方式,添加jadClipse解析器，并设为默认</p>
-<p><img src="/2017/11/13/eclipse-jadclipse/03.jpg" alt=""></p>
-<h3 id="03-设置-class-without-source文件类型打开方式"><a href="#03-设置-class-without-source文件类型打开方式" class="headerlink" title="03 设置*.class without source文件类型打开方式"></a>03 设置*.class without source文件类型打开方式</h3><p>最后设置*.class without source文件类型打开方式，如图示</p>
-<p><img src="/2017/11/13/eclipse-jadclipse/04.jpg" alt=""></p>
-<p>附：资源文件下载地址</p>
-<p>链接：<a href="http://pan.baidu.com/s/1eS0D9E6" target="_blank" rel="external">http://pan.baidu.com/s/1eS0D9E6</a> 密码：icii</p>
-
+        
+          <a class="article-more-a" href="/2017/11/13/eclipse-jadclipse/#more">阅读全文 >></a>
+        
       
 
       
@@ -652,6 +733,18 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">hexo-img</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">md</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">md文件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
@@ -661,10 +754,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">hexo-img</a>
               </li>
             
             <div class="clearfix"></div>
