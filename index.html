@@ -137,6 +137,132 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-push-project-to-github" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/30/push-project-to-github/">push-project-to-github</a>
+    </h1>
+  
+
+
+
+  <a href="javascript:;" class="archive-article-date">
+      <i class="icon-smile icon"></i> 阅读数:<span id="/2017/12/30/push-project-to-github/" class="pageViews">0</span>次
+  </a>
+
+        
+        <a href="/2017/12/30/push-project-to-github/" class="archive-article-date">
+  	<time datetime="2017-12-30T04:03:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="01-创建仓库"><a href="#01-创建仓库" class="headerlink" title="01 创建仓库"></a>01 创建仓库</h2><p>首先，要想将自己本地的代码上传到github上，你需要有一个github账号并为你的本地代码在github上创建一个远程仓库。此处假设你已完成该步骤。</p>
+<h2 id="02-安装git"><a href="#02-安装git" class="headerlink" title="02 安装git"></a>02 安装git</h2><p>这里先假设你只有代码，连git都没有下载，那我们就从git安装开始，git安装很简单，从官网下载git.</p>
+<p>安装时一路默认即可。</p>
+<h2 id="03-准备工作"><a href="#03-准备工作" class="headerlink" title="03 准备工作"></a>03 准备工作</h2><h3 id="3-1-创建本地仓库"><a href="#3-1-创建本地仓库" class="headerlink" title="3.1 创建本地仓库"></a>3.1 创建本地仓库</h3><p>首先进入自己的要上传的代码目录，鼠标右键打开git bash here，输入以下代码</p>
+<pre><code>$ git init 
+</code></pre><p>成功后会在当前目录生成一个.git文件夹，这样本地仓库就创建成功了。</p>
+<h3 id="3-2-添加代码到缓存区"><a href="#3-2-添加代码到缓存区" class="headerlink" title="3.2 添加代码到缓存区"></a>3.2 添加代码到缓存区</h3><p>之后就要在git中提交代码到本地仓库，首先添加代码到本地暂存区，在bash中使用以下命令</p>
+<pre><code>$ git add .
+</code></pre><p>“.”号代表将当前所有文件加入暂存区列表中。</p>
+<h3 id="3-3-添加代码倒本地仓库"><a href="#3-3-添加代码倒本地仓库" class="headerlink" title="3.3 添加代码倒本地仓库"></a>3.3 添加代码倒本地仓库</h3><p>再将暂存区的代码提交到HEAD，它保存你最后一次提交的结果，在bash中输入以下命令</p>
+<pre><code>$ git commit -m &quot;添加代码的描述信息&quot;
+</code></pre><p>到这里，你的代码已经被提交到本地仓库了,但是如果想提交到远程仓库还需要进行如下的配置，请继续耐心往下看。</p>
+<h2 id="04-配置ssh"><a href="#04-配置ssh" class="headerlink" title="04 配置ssh"></a>04 配置ssh</h2><p>此步骤不会的同学，请看我之前发布的博客：<br><a href="http://www.edwarder.com/2017/11/05/hexo/">http://www.edwarder.com/2017/11/05/hexo/</a></p>
+<p>这里不再赘述。</p>
+<h2 id="05-提交本地仓库"><a href="#05-提交本地仓库" class="headerlink" title="05 提交本地仓库"></a>05 提交本地仓库</h2><h3 id="5-1-关联远程仓库"><a href="#5-1-关联远程仓库" class="headerlink" title="5.1 关联远程仓库"></a>5.1 关联远程仓库</h3><p>复制已创建的仓库ssh地址，如下图：</p>
+<p><img src="/2017/12/30/push-project-to-github/01.jpg" alt=""></p>
+<p>然后在bash中输入以下代码：</p>
+<pre><code>$ git remote add origin git@github.com:edwarder2017/loadMore.git
+</code></pre><p>成功后就相当于在你的本地库和远程仓库之间建立了映射，以后每次提交代码就不需要输入账号名和密码了。</p>
+<h3 id="5-2-最终提交"><a href="#5-2-最终提交" class="headerlink" title="5.2 最终提交"></a>5.2 最终提交</h3><p>使用如下命令提交本地仓库</p>
+<pre><code>$ git push origin master
+</code></pre><p>提交成功后，刷新自己的仓库可以看到提交的代码：</p>
+<p><img src="/2017/12/30/push-project-to-github/05.jpg" alt=""></p>
+<h2 id="06-异常问题"><a href="#06-异常问题" class="headerlink" title="06 异常问题"></a>06 异常问题</h2><h3 id="6-1-仓库已存在"><a href="#6-1-仓库已存在" class="headerlink" title="6.1 仓库已存在"></a>6.1 仓库已存在</h3><p>出现问题：</p>
+<pre><code>$ git remote add origin git@github.com:edwarder2017/loadMore.git
+fatal: remote origin already exists.
+</code></pre><p>解决办法：</p>
+<p>先输入</p>
+<pre><code>$ git remote rm origin
+</code></pre><p>再输入</p>
+<pre><code>$ git remote add origin git@github.com:edwarder2017/loadMore.git
+</code></pre><h3 id="6-2-提交失败"><a href="#6-2-提交失败" class="headerlink" title="6.2 提交失败"></a>6.2 提交失败</h3><p>错误如下：</p>
+<p><img src="/2017/12/30/push-project-to-github/02.jpg" alt=""></p>
+<p>通过查看提示信息，我发现，是因为本地仓库和远程仓库的文件不一致所致，也就是说，github允许你本地仓库有的东西，远程仓库里没有，但不允许远程仓库有的东西，你本地仓库没有。问题找到了，解决办法就很简单了，那就是在push之前先同步一下本地仓库与远程仓库的文件。使用以下命令：</p>
+<pre><code>$ git pull --rebase origin master
+</code></pre><p>成功后会提示如下:</p>
+<p><img src="/2017/12/30/push-project-to-github/03.jpg" alt=""></p>
+<p>再使用提交命令：</p>
+<pre><code>$ git push origin master
+</code></pre><p>成功后显示如下:</p>
+<p><img src="/2017/12/30/push-project-to-github/04.jpg" alt=""></p>
+<p>欢迎交流与分享。</p>
+<p>QQ：1104975916</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">git提交错误问题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/30/push-project-to-github/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-oracle-round-trunc" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -170,14 +296,9 @@
 <p> 返回结果如下：</p>
 <p><img src="/2017/12/05/oracle-round-trunc/01.jpg" alt=""></p>
 <p>【相近】trunc(x[,y]) 返回截取后的值，用法同round(x[,y]),只是不四舍五入</p>
-<h2 id="02-trunc-x-y"><a href="#02-trunc-x-y" class="headerlink" title="02 trunc(x[,y])"></a>02 trunc(x[,y])</h2><p>【功能】返回x按精度y截取后的值</p>
-<p>【参数】x,y，数字型表达式,如果y不为整数则截取y整数部分，如果y&gt;0则截取到y位小数，如果y小于0则截取到小数点向左第y位，小数前其它数据用0表示。 </p>
-<p>【返回】数字 </p>
-<p>【示例】 select trunc(8888.7777,2.1),trunc(8888.7777,-2.6),trunc(8888.033333) from dual;  </p>
-<p>返回结果如下:</p>
-<p><img src="/2017/12/05/oracle-round-trunc/01.jpg" alt=""></p>
-<p>【相近】round(x[,y]) 返回截取后的值，用法同trunc(x[,y]),只是要做四舍五入</p>
-
+        
+          <a class="article-more-a" href="/2017/12/05/oracle-round-trunc/#more">阅读全文 >></a>
+        
       
 
       
@@ -822,18 +943,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">jadclipse</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">反编译插件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">eclipse反编译插件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">hexo-img</a>
               </li>
              
@@ -846,7 +955,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color5">jadclipse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">反编译插件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">eclipse反编译插件</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -867,6 +984,18 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">trunc函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">git提交错误问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>
